@@ -1,19 +1,24 @@
-@use './partials/Var' as *;
+@use './partials/Var.scss' as *;
+@use './partials/Font.scss' as *;
 
 @import 'bootstrap/scss/bootstrap';
+
+h1 {
+  font-size: 100px;
+  color: white;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 15px;
+}
 
 .container-tb {
     width: 100%;
     border-bottom: 1px solid #AAAAAA;
-  }
-
-  h1 {
-    font-size: 100px;
-    color: white;
-  }
-
-  h4 {
-    color: white;
   }
 
   button {
@@ -23,3 +28,28 @@
     color: white;
     border-radius: 25px;
   }
+
+  .container-main {
+    padding-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .sectionTitle {
+    margin: 0 auto;
+    .stripe {
+        width: 40%;
+    }
+    h2 {
+      width: 40%;
+      line-height: 20px;
+    }
+}
+
+  .stripe {
+    width: 100%;
+    height: 1px;
+    border: 1px solid $lightgrey-color;
+    margin-top: 10px;
+  }
+
