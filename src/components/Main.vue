@@ -1,11 +1,13 @@
 <script>
 
 import Products from './partials/Products.vue'
+import Collections from './partials/Collections.vue'
 
 export default {
   name: 'Main',
   components: {
-    Products
+    Products,
+    Collections
   }
   
 }
@@ -14,6 +16,7 @@ export default {
 <template>
   
   <Products />
+  <Collections />
 
 </template>
 
