@@ -15,19 +15,21 @@ export default {
 
 <template>
 
-  <div class="container-bt">
-    
+  <div class="container-tb">
+   
     <Headertop />
-    <Headerbottom />
-       
+    
   </div>
+
+  <Headerbottom />
+
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-.container-bt {
-  width: 70%;
-  margin: 0 auto;
+ .container-tb {
+  width: 100%;
+  border-bottom: 1px solid #AAAAAA;
 }
 
 

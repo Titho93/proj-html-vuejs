@@ -8,6 +8,7 @@ export default {
 
 <template>
   
+  <div class="container-bt">
     
     <div class="nav">
       
@@ -28,7 +29,7 @@ export default {
         </ul>
       </div>
     </div>
-
+  </div>  
 
 
   
@@ -36,13 +37,18 @@ export default {
 
 <style lang="scss" scoped>
 
+.container-bt {
+  width: 70%;
+  margin: 0 auto;
+}
 .nav {
+  height: 50px;
   display: flex;
   .social {
     width: 50%;
     ul {
       li {
-        padding: 10px;
+        padding: 12px 10px;
       }
     }
   }
@@ -62,7 +68,7 @@ export default {
 
 .cart {
   color: #494949;
-  padding: 10px 50px;
+  padding: 15px 50px;
   background-color: #c9c7c7;
 }
 
@@ -72,7 +78,7 @@ ul {
 }
 
 li {
-  padding: 10px;
+  padding: 15px 10px;
 }
 
 </style>
