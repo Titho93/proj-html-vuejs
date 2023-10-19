@@ -15,7 +15,7 @@ export default {
 
 <template>
 
-  <div class="container">
+  <div class="container-bt">
     
     <Headertop />
     <Headerbottom />
@@ -24,6 +24,11 @@ export default {
 </template>
 
 <style lang="scss">
+
+.container-bt {
+  width: 70%;
+  margin: 0 auto;
+}
 
 
 </style>

@@ -39,7 +39,7 @@ export default {
 .nav {
   display: flex;
   .social {
-    flex-grow: 3;
+    width: 50%;
     ul {
       li {
         padding: 10px;
@@ -47,21 +47,32 @@ export default {
     }
   }
   .menu-list {
-    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    width: 50%;
     ul {
       font-size: 13px;
       color: #AAAAAA;
       li {
-        padding: 10px;
         border-right: 1px solid #AAAAAA;
       }
     }
   }
 }
 
+.cart {
+  color: #494949;
+  padding: 10px 50px;
+  background-color: #c9c7c7;
+}
+
 ul {
     list-style: none;
     display: flex;
+}
+
+li {
+  padding: 10px;
 }
 
 </style>
