@@ -43,8 +43,8 @@ export default {
   }
   .description {
     position: absolute;
+    width: 100%;
     top: 185px;
-    left: 550px;
     text-align: center;
     .buttons {
       padding-top: 20px;

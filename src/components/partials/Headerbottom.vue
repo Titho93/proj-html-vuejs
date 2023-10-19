@@ -47,6 +47,7 @@ export default {
   display: flex;
   .logo {
     padding: 30px 40px;
+    width: 30%;
   }
   .menu {
     display: flex;
@@ -54,7 +55,7 @@ export default {
       display: flex;
       list-style: none;
       li {
-        font-size: 15px;
+        font-size: 13px;
         margin-left: 40px;
         line-height: 100px;
         cursor: pointer;
