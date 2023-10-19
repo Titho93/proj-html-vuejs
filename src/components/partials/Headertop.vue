@@ -46,6 +46,8 @@ export default {
   display: flex;
   .social {
     width: 50%;
+    display: flex;
+    justify-content: start;
     ul {
       li {
         padding: 12px 10px;
@@ -69,7 +71,7 @@ export default {
 .cart {
   color: #494949;
   padding: 15px 50px;
-  background-color: #c9c7c7;
+  background-color: FAFAFA;
 }
 
 ul {
