@@ -89,3 +89,17 @@ h4 {
   text-decoration: line-through;
   font-size: 15px;
 }
+
+button.blue {
+  height: 40px;
+  padding: 0 30px;
+  background-color: #427ED1;
+  color: white;
+  border-radius: 20px;
+  font-size: 13px;
+  border: none;
+  margin: 32px;
+  &:hover {
+    opacity: 50%;
+  }
+}

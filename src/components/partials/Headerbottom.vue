@@ -24,7 +24,7 @@ export default {
           <li>News</li>
           <li>Elements <i class="fa-solid fa-chevron-down"></i></li>
         </ul>
-        <button>SHOP NOW!</button>
+        <button class="blue">SHOP NOW!</button>
         <span><i class="fa-solid fa-magnifying-glass"></i></span>
       </div>
 
@@ -67,19 +67,6 @@ export default {
           font-size: 10px;
           padding: 0 5px;
         }
-      }
-    }
-    button {
-      height: 40px;
-      padding: 0 30px;
-      background-color: #427ED1;
-      color: white;
-      border-radius: 20px;
-      font-size: 13px;
-      border: none;
-      margin: 32px;
-      &:hover {
-        opacity: 50%;
       }
     }
 
