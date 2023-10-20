@@ -2,12 +2,14 @@
 
 import Send from './partials/Send.vue';
 import Repilogue from './partials/Repilogue.vue';
+import Payment from './partials/Payment.vue';
 
 export default {
   name: 'Footer',
   components: {
     Send,
-    Repilogue
+    Repilogue,
+    Payment
   }
 }
 
@@ -17,6 +19,7 @@ export default {
 
 <Send />
 <Repilogue />
+<Payment />
   
 </template>
 
