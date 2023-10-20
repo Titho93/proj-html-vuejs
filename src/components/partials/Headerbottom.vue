@@ -2,6 +2,35 @@
 
 export default {
   name: 'Headerbottom',
+  data () {
+    return {
+      list: [
+        {
+          text: 'Home',
+          font: 'fa-solid fa-chevron-down'
+        },
+        {
+          text: 'Shop',
+          font: 'fa-solid fa-chevron-down'
+        },
+        {
+          text: 'Products',
+          font: 'fa-solid fa-chevron-down'
+        },
+        {
+          text: 'Categories',
+          font: 'fa-solid fa-chevron-down'
+        },
+        {
+          text: 'News',
+        },
+        {
+          text: 'Elements',
+          font: 'fa-solid fa-chevron-down'
+        }
+      ]
+    }
+  }
   
 }
 </script>
@@ -17,12 +46,10 @@ export default {
       </div>
       <div class="menu">
         <ul>
-          <li>Home <i class="fa-solid fa-chevron-down"></i></li>
-          <li>Shop <i class="fa-solid fa-chevron-down"></i></li>
-          <li>Products <i class="fa-solid fa-chevron-down"></i></li>
-          <li>Categories <i class="fa-solid fa-chevron-down"></i></li>
-          <li>News</li>
-          <li>Elements <i class="fa-solid fa-chevron-down"></i></li>
+          <li v-for="(item,index) in list"
+          :key="index">{{item.text}} 
+          <i :class="item.font"></i>
+          </li>
         </ul>
         <button class="blue">SHOP NOW!</button>
         <span><i class="fa-solid fa-magnifying-glass"></i></span>
