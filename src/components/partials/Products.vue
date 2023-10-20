@@ -31,7 +31,10 @@ export default {
             <ul>
                 <li>
                     <div class="card-pt">
-                        <img src="../../assets/black_elegant_leather_jacket-400x520.jpg" alt="">
+                        <div class="image">
+                            <img src="../../assets/black_elegant_leather_jacket-400x520.jpg" alt="">
+                            <div class="hover-card"><i class="fa-regular fa-square-check"></i></div>
+                        </div>
                         <h4>Black Leather Jacket</h4>
                         <span class="bio">Men,Jackets,Jeans</span>
                         <div class="price">
@@ -42,7 +45,10 @@ export default {
                 </li>
                 <li>
                     <div class="card-pt">
-                        <img src="../../assets/black_leather_suit-400x520.jpg" alt="">
+                        <div class="image">
+                            <img src="../../assets/black_leather_suit-400x520.jpg" alt="">
+                            <div class="hover-card"><i class="fa-regular fa-square-check"></i></div>
+                        </div>
                         <h4>Black Leather Suit</h4>
                         <span class="bio">Men,Jackets</span>
                         <div class="price">
@@ -52,7 +58,10 @@ export default {
                 </li>
                 <li>
                     <div class="card-pt">
-                        <img src="../../assets/blue_jacket_and_white_stripe_tee-400x520.jpg" alt="">
+                        <div class="image">
+                            <img src="../../assets/blue_jacket_and_white_stripe_tee-400x520.jpg" alt="">
+                            <div class="hover-card"><i class="fa-regular fa-square-check"></i></div>
+                        </div>
                         <h4>Blue Jacket & Stripe Tee</h4>
                         <span class="bio">Men,Jackets,Suits</span>
                         <div class="price">
@@ -62,7 +71,10 @@ export default {
                 </li>
                 <li>
                     <div class="card-pt">
-                        <img src="../../assets/modern_black_leather_suit-400x520.jpg" alt="">
+                        <div class="image">
+                            <img src="../../assets/modern_black_leather_suit-400x520.jpg" alt="">
+                            <div class="hover-card"><i class="fa-regular fa-square-check"></i></div>
+                        </div>
                         <h4>Modern Black Leather Suit</h4>
                         <span class="bio">Men,Jackets</span>
                         <div class="price">
@@ -115,8 +127,43 @@ export default {
         list-style: none;
         li {
             .card-pt {
-                img {
-                    width: 80%;
+                .image {
+                    cursor: pointer;
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    &:hover {
+                        .hover-card {
+                            display: flex;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                    }
+                    .hover-card {
+                        display: none;
+                        width: 90%;
+                        height: 100%;
+                        top: 0;
+                        position: absolute;
+                        background: linear-gradient(#5087d4e9 0%, #8692d4e6 25%, rgba(173, 157, 211, 0.913) 50%, #f0a6d2f5 100%);
+                        justify-content: center;
+                        align-items: center;
+                        i {
+                            width: 60px;
+                            height: 60px;
+                            text-align: center;
+                            line-height: 60px;
+                            font-size: 25px;
+                            border-radius: 50%;
+                            color: white;
+                            background-color: #2B2E32;
+                            &:hover {
+                                background-color: #e4e6e9;
+                                color: black;
+                            }
+                        }
+                    }
                 }
                 h4 {
                     padding-top: 20px;
