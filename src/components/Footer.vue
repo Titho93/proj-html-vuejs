@@ -1,11 +1,13 @@
 <script>
 
 import Send from './partials/Send.vue';
+import Repilogue from './partials/Repilogue.vue';
 
 export default {
   name: 'Footer',
   components: {
-    Send
+    Send,
+    Repilogue
   }
 }
 
@@ -14,6 +16,7 @@ export default {
 <template>
 
 <Send />
+<Repilogue />
   
 </template>
 

@@ -103,3 +103,16 @@ button.blue {
     opacity: 50%;
   }
 }
+
+.container-se {
+  width: 100%;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 9px;
+  border: 1px solid $lightgrey-color;
+  font-size: 12px;
+  margin: 3px;
+  cursor: pointer;
+}

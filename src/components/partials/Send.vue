@@ -32,9 +32,8 @@ export default {
 <style lang="scss" scoped>
 
 .container-se {
-  width: 100%;
   height: 230px;
-  background-color: #494949;
+  background-color: #303337;
   .send {
     text-align: center;
     margin: 0 auto;
