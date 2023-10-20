@@ -133,7 +133,8 @@ export default {
                         font-size: 15px;
                     }
                     .discount {
-                        text-decoration: line-through;
+                        font-size: 12px;
+                        line-height: 2px;
                     }
                 }
             }
