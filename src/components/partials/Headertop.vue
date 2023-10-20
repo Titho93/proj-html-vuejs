@@ -2,6 +2,28 @@
 
 export default {
   name: 'Headertop',
+  data () {
+    return {
+      iconsocial: [
+      {
+        href: '#',
+        font: 'fa-brands fa-facebook-f'
+      },
+      {
+        href: '#',
+        font: 'fa-brands fa-twitter'
+      },
+      {
+        href: '#',
+        font: 'fa-brands fa-instagram'
+      },
+      {
+        href: '#',
+        font: 'fa-brands fa-youtube'
+      }
+      ] 
+    }
+  }
   
 }
 </script>
@@ -14,10 +36,12 @@ export default {
       
       <div class="social">
         <ul>
-          <li><i class="fa-brands fa-facebook-f"></i></li>
-          <li><i class="fa-brands fa-twitter"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-youtube"></i></li>
+          <li v-for="(item,index) in iconsocial"
+          :key="index">
+            <a :href="item.href">
+              <i :class="item.font"></i>
+            </a>
+          </li>
         </ul>
       </div>
   
@@ -52,8 +76,11 @@ export default {
       li {
         cursor: pointer;
         padding: 12px 10px;
-        &:hover {
-          color: #427ED1;
+        a{
+          color: black;
+          &:hover {
+            color: #427ED1;
+          }
         }
       }
     }
