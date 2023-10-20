@@ -29,7 +29,7 @@ export default {
 
  .container-tb {
   width: 100%;
-  border-bottom: 1px solid #AAAAAA;
+  border-bottom: 1px solid #F5F5F5;
 }
 
 

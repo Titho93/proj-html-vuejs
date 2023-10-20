@@ -174,7 +174,7 @@ export default {
               left: 20px;
               bottom: 20px;
               &:hover {
-                color: black;
+                color: #427ED1;
               }
             }
             .details {
@@ -182,7 +182,7 @@ export default {
               right: 20px;
               bottom: 20px;
               &:hover {
-                color: black;
+                color: #427ED1;
               }
             }
           }

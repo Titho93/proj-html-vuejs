@@ -184,6 +184,9 @@ export default {
                         cursor: pointer;
                         color: white;
                         padding-right: 15px;
+                        &:hover {
+                            color: #427ED1;
+                        }
                     }
                 }
             }
@@ -210,6 +213,9 @@ export default {
                         flex-direction: column;
                         .object {
                             font-size: 14px;
+                            &:hover {
+                                color: #427ED1;
+                            }
                         }
                         .price {
                             font-size: 15px;
@@ -227,6 +233,9 @@ export default {
                 li {
                     cursor: pointer;
                     font-size: 14px;
+                    :hover {
+                        color: #427ED1;
+                    }
                     i {
                         font-size: 12px;
                         padding: 8px;
@@ -237,6 +246,9 @@ export default {
                 li {
                     border-bottom: none;
                     padding: 0;
+                    :hover {
+                        color: #427ED1;
+                    }
                 }
             }
         }

@@ -52,6 +52,9 @@ export default {
       li {
         cursor: pointer;
         padding: 12px 10px;
+        &:hover {
+          color: #427ED1;
+        }
       }
     }
   }
@@ -64,7 +67,11 @@ export default {
       color: #AAAAAA;
       li {
         cursor: pointer;
-        border-right: 1px solid #AAAAAA;
+        border-right: 1px solid #F5F5F5;
+        &:hover {
+          color: #427ED1;
+          background-color: #FAFAFA;
+        }
       }
     }
   }
