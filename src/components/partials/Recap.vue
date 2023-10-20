@@ -43,7 +43,7 @@ export default {
                         <span class="real">$57</span>
                     </div>
                 </div>
-                <img src="../../assets/black_leather_jacket-400x520.jpg" alt="">
+                <img src="../../assets/hipster_black_top-400x520.jpg" alt="">
             </li>
 
         </ul>
