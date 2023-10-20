@@ -134,7 +134,7 @@ export default {
                     }
                     .discount {
                         font-size: 12px;
-                        line-height: 2px;
+                        line-height: 25px;
                     }
                 }
             }
