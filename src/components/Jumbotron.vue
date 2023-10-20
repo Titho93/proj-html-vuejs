@@ -33,7 +33,7 @@ export default {
 @use '../scss/Main.scss';
 
 .container-jb {
-  width: 100vw;
+  width: 100%;
   height: 650px;
   position: relative;
   img {

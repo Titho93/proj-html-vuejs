@@ -21,7 +21,7 @@ export default {
 
         <div class="select">
             <ul>
-                <li class="active">Men</li>
+                <li>Men</li>
                 <li>Women</li>
                 <li>Accessories</li>
             </ul>
@@ -93,6 +93,7 @@ export default {
         display: flex;
         justify-content: center;
         li {
+            cursor: pointer;
             padding: 15px 60px;
             border: 1px solid #AAAAAA;
             background-color: #F5F5F5;
@@ -100,11 +101,10 @@ export default {
                 border-left: none;
                 border-right: none;
             }
+            &:hover {
+                background-color: white;
+            }
         }
-        .active {
-            background-color: white;
-        }
-
     }
 }
 

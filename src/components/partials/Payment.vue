@@ -49,7 +49,7 @@ export default {
 
 .container-se {
     width: 100%;
-    height: 120px;
+    height: 130px;
     background-color: #1C1E21;
     .pay {
         padding-top: 40px;

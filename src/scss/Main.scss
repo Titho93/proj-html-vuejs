@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1 {
   font-size: 100px;
   color: white;
@@ -33,6 +37,10 @@ h4 {
     border: 2px solid white;
     color: white;
     border-radius: 25px;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.763);
+      color: black;
+    }
   }
 
   .container-main {
@@ -68,10 +76,13 @@ h4 {
   margin: auto 0;
   height: 60px;
   padding: 0 13px;
-  background-color: #AAAAAA;
+  background-color: #dbd9d9;
   line-height: 55px;
   color: white;
   cursor: pointer;
+  &:hover {
+    background-color: #060606;
+  }
   i {
     font-size: 10px;
   }
