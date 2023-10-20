@@ -2,6 +2,45 @@
 
 export default {
   name: 'Products',
+  data () {
+    return {
+        cards: [
+            {
+                image: 'black_elegant_leather_jacket-400x520.jpg',
+                font: 'fa-regular fa-square-check',
+                title: 'Black Leather Jacket',
+                bio: 'Men,Jackets,Jeans',
+                discount: '$235',
+                price: '$200'
+
+            },
+            {
+                image: 'black_leather_suit-400x520.jpg',
+                font: 'fa-regular fa-square-check',
+                title: 'Black Leather Suit',
+                bio: 'Men,Jackets',
+                price: '$176'
+
+            },
+            {
+                image: 'blue_jacket_and_white_stripe_tee-400x520.jpg',
+                font: 'fa-regular fa-square-check',
+                title: 'Blue Jacket & Stripe Tee',
+                bio: 'Men,Jackets,Suits',
+                price: '$580'
+
+            },
+            {
+                image: 'modern_black_leather_suit-400x520.jpg',
+                font: 'fa-regular fa-square-check',
+                title: 'Modern Black Leather Suit',
+                bio: 'Men,Jackets',
+                price: '$96'
+
+            }
+        ]
+    }
+  }
   
 }
 </script>
@@ -29,59 +68,22 @@ export default {
 
         <div class="card-product">
             <ul>
-                <li>
+                <li v-for="(card,index) in cards"
+                :key="index">
                     <div class="card-pt">
                         <div class="image">
-                            <img src="../../assets/black_elegant_leather_jacket-400x520.jpg" alt="">
-                            <div class="hover-card"><i class="fa-regular fa-square-check"></i></div>
+                            <img :src="`/assets/${ card.image }`" alt="">
+                            <div class="hover-card"><i :class="card.font"></i></div>
                         </div>
-                        <h4>Black Leather Jacket</h4>
-                        <span class="bio">Men,Jackets,Jeans</span>
+                        <h4>{{card.title}}</h4>
+                        <span class="bio">{{card.bio}}</span>
                         <div class="price">
-                            <span class="discount">$235</span>
-                            <span class="real">$200</span>
+                            <span class="discount">{{card.discount}}</span>
+                            <span class="real">{{card.price}}</span>
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="card-pt">
-                        <div class="image">
-                            <img src="../../assets/black_leather_suit-400x520.jpg" alt="">
-                            <div class="hover-card"><i class="fa-regular fa-square-check"></i></div>
-                        </div>
-                        <h4>Black Leather Suit</h4>
-                        <span class="bio">Men,Jackets</span>
-                        <div class="price">
-                            <span class="real">$176</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card-pt">
-                        <div class="image">
-                            <img src="../../assets/blue_jacket_and_white_stripe_tee-400x520.jpg" alt="">
-                            <div class="hover-card"><i class="fa-regular fa-square-check"></i></div>
-                        </div>
-                        <h4>Blue Jacket & Stripe Tee</h4>
-                        <span class="bio">Men,Jackets,Suits</span>
-                        <div class="price">
-                            <span class="real">$580</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card-pt">
-                        <div class="image">
-                            <img src="../../assets/modern_black_leather_suit-400x520.jpg" alt="">
-                            <div class="hover-card"><i class="fa-regular fa-square-check"></i></div>
-                        </div>
-                        <h4>Modern Black Leather Suit</h4>
-                        <span class="bio">Men,Jackets</span>
-                        <div class="price">
-                            <span class="real">$96</span>
-                        </div>
-                    </div>
-                </li>
+                
             </ul> 
         </div>
 
