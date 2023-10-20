@@ -204,7 +204,7 @@ export default {
 <style lang="scss">
 
 .container-rc {
-    margin: 250px auto;
+    margin: 250px auto 0 auto;
 
     border-top: 2px solid #F5F5F5;
     width: 98%;

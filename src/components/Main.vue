@@ -8,6 +8,7 @@ import Newarrivals from './partials/Newarrivals.vue';
 import Reviews from './partials/Reviews.vue';
 import Ourblog from './partials/Ourblog.vue';
 import Recap from './partials/Recap.vue';
+import Brand from './partials/Brand.vue';
 
 export default {
   name: 'Main',
@@ -19,7 +20,8 @@ export default {
     Newarrivals,
     Reviews,
     Ourblog,
-    Recap
+    Recap,
+    Brand
   }
   
 }
@@ -35,6 +37,7 @@ export default {
   <Reviews />
   <Ourblog />
   <Recap />
+  <Brand />
 
 </template>
 
