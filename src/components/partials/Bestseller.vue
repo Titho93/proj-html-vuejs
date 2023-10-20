@@ -47,30 +47,14 @@ export default {
 
 .fp {
   padding-top: 50px;
-  .sectionTitle {
-    h2 {
-      text-align: center;
-    }
-  }
+  text-align: center;
   p {
-    text-align: center;
+    
     padding: 20px 0;
   }
 }
 .swiper {
   width: 100%;
-  .arrow {
-    margin: auto 0;
-    height: 60px;
-    padding: 0 13px;
-    background-color: #AAAAAA;
-    line-height: 55px;
-    color: white;
-    cursor: pointer;
-    i {
-      font-size: 10px;
-    }
-  }
   ul {
     display: flex;
     list-style: none;
