@@ -17,7 +17,7 @@ export default {
             <div class="bios">
                 <h2>Winter Collection</h2>
                 <p>STYLISH AND WARM</p>
-                <button>VIEW MORE</button>
+                <button class="small">VIEW MORE</button>
             </div>
         </div>
         <div class="square">
@@ -27,7 +27,7 @@ export default {
             <div class="bios">
                 <h2>Spring Collectionn</h2>
                 <p>BRIGHT AND COLORFUL</p>
-                <button>VIEW MORE</button>
+                <button class="small">VIEW MORE</button>
             </div>
         </div>
         <div class="square">
@@ -37,7 +37,7 @@ export default {
             <div class="bios">
                 <h2>Autumn Collection</h2>
                 <p>RICH AND CONFORTABLE</p>
-                <button>VIEW MORE</button>
+                <button class="small">VIEW MORE</button>
             </div>
         </div>
     </div>
@@ -46,7 +46,7 @@ export default {
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .collection {
     padding-top: 150px;
@@ -75,10 +75,6 @@ export default {
             p {
                 padding: 10px 0;
                 font-size: 20px;
-            }
-            button {
-                padding: 10px 25px;
-                font-size: 13px;
             }
         }
     }

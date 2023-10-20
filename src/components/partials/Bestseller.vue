@@ -66,6 +66,7 @@ export default {
     background-color: #AAAAAA;
     line-height: 55px;
     color: white;
+    cursor: pointer;
     i {
       font-size: 10px;
     }
