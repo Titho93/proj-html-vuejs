@@ -39,7 +39,7 @@ export default {
 .container-lo {
     width: 100%;
     height: 300px;
-    padding-top: 80px;
+    padding-top: 60px;
     text-align: center;
     background-color: #F5F5F5;
     span {
@@ -47,7 +47,7 @@ export default {
         padding-left: 30px;
     }
     .logos {
-        padding-top: 50px;
+        padding-top: 40px;
         margin: 0 auto;
         width: 70%;
         ul {
