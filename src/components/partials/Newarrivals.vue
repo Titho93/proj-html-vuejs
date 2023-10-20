@@ -12,7 +12,7 @@ export default {
         <div class="fp">
             <div class="sectionTitle d-flex">
             <div class="stripe"></div>
-            <h2><strong>Best Seller</strong></h2>
+            <h2><strong>New Arrivals</strong></h2>
             <div class="stripe"></div>
             </div>
             <p>Brand new product from top designers</p>
