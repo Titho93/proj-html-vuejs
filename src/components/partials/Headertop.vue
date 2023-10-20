@@ -50,6 +50,7 @@ export default {
     justify-content: start;
     ul {
       li {
+        cursor: pointer;
         padding: 12px 10px;
       }
     }
@@ -62,6 +63,7 @@ export default {
       font-size: 13px;
       color: #AAAAAA;
       li {
+        cursor: pointer;
         border-right: 1px solid #AAAAAA;
       }
     }

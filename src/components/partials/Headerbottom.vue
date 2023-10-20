@@ -58,9 +58,10 @@ export default {
         font-size: 13px;
         margin-left: 40px;
         line-height: 100px;
+        border-top: 3px solid white;
         cursor: pointer;
         &:hover {
-          border-top: 2px solid #427ED1;
+          border-top: 3px solid #427ED1;
           color: #427ED1;
         }
         i {
