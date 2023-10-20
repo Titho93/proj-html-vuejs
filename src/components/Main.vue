@@ -5,6 +5,7 @@ import Collections from './partials/Collections.vue';
 import Bestseller from './partials/Bestseller.vue';
 import Offer from './partials/Offer.vue';
 import Newarrivals from './partials/Newarrivals.vue';
+import Reviews from './partials/Reviews.vue';
 
 export default {
   name: 'Main',
@@ -13,7 +14,8 @@ export default {
     Collections,
     Bestseller,
     Offer,
-    Newarrivals
+    Newarrivals,
+    Reviews
   }
   
 }
@@ -26,6 +28,7 @@ export default {
   <Bestseller />
   <Offer />
   <Newarrivals />
+  <Reviews />
 
 </template>
 
