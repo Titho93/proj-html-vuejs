@@ -2,41 +2,41 @@
 
 export default {
   name: 'Collections',
-
-  
+  data () {
+    return {
+        squares: [
+            {
+                image: 'winter_collection_bg.jpg',
+                title: 'Winter Collection',
+                bio: 'STYLISH AND WARM'
+            },
+            {
+                image: 'spring_collection_bg.jpg',
+                title: 'Spring Collectionn',
+                bio: 'BRIGHT AND COLORFUL'
+            },
+            {
+                image: 'autumn_collection_bg.jpg',
+                title: 'Autumn Collection',
+                bio: 'RICH AND CONFORTABLE'
+            }
+        ]
+    }
+  }
 }
 </script>
 
 <template>
 
     <div class="collection">
-        <div class="square">
+        <div v-for="(square,index) in squares" class="square"
+        :key="index">
             <div class="image">
-                <img src="../../assets/winter_collection_bg.jpg" alt="">
+                <img :src="`../../assets/${square.image}`" alt="">
             </div>
             <div class="bios">
-                <h2>Winter Collection</h2>
-                <p>STYLISH AND WARM</p>
-                <button class="small">VIEW MORE</button>
-            </div>
-        </div>
-        <div class="square">
-            <div class="image">
-                <img src="../../assets/spring_collection_bg.jpg" alt="">
-            </div>
-            <div class="bios">
-                <h2>Spring Collectionn</h2>
-                <p>BRIGHT AND COLORFUL</p>
-                <button class="small">VIEW MORE</button>
-            </div>
-        </div>
-        <div class="square">
-            <div class="image">
-                <img src="../../assets/autumn_collection_bg.jpg" alt="">
-            </div>
-            <div class="bios">
-                <h2>Autumn Collection</h2>
-                <p>RICH AND CONFORTABLE</p>
+                <h2>{{square.title}}</h2>
+                <p>{{square.bio}}</p>
                 <button class="small">VIEW MORE</button>
             </div>
         </div>
