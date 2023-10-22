@@ -1,7 +1,33 @@
 <script>
 
 export default {
-  name: 'Payment'
+  name: 'Payment',
+  data () {
+    return {
+        paycards: [
+            {
+                href: '#',
+                image: 'visa.png'
+            },
+            {
+                href: '#',
+                image: 'paypal.png'
+            },    
+            {
+                href: '#',
+                image: 'mastercard.png'
+            },
+            {
+                href: '#',
+                image: 'discover.png'
+            },
+            {
+                href: '#',
+                image: 'amazon.png'
+            }
+        ]
+    }
+  }
 }
 
 </script>
@@ -12,33 +38,13 @@ export default {
     <div class="pay d-flex">
         <span>Copyright 2012 - 2020 | Avada Theme by Theme Fusion | All Rights Reserved | Powered by WordPress</span>
         <ul>
-            <li>
-                <a href="#">
-                    <img src="../../assets/visa.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../../assets/paypal.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../../assets/mastercard.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../../assets/discover.png" alt="">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../../assets/amazon.png" alt="">
+            <li v-for="(paycard,index) in paycards"
+            :key="index">
+                <a :href= paycard.href>
+                    <img :src="`../../assets/${ paycard.image }`" alt="">
                 </a>
             </li>
         </ul>
-
     </div>
 </div>
 
