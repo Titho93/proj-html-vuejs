@@ -93,6 +93,10 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .fp {
     text-align: center;
     p {
@@ -109,14 +113,11 @@ export default {
         li {
             cursor: pointer;
             padding: 15px 60px;
-            border: 1px solid #AAAAAA;
-            background-color: #F5F5F5;
+            border: 1px solid $lightgrey-color;
+            background-color: $darkwhite-color;
             &:nth-child(2) {
                 border-left: none;
                 border-right: none;
-            }
-            &:hover {
-                background-color: white;
             }
         }
     }
@@ -134,11 +135,6 @@ export default {
                     position: relative;
                     width: 100%;
                     height: 100%;
-                    &:hover {
-                        .hover-card {
-                            display: flex;
-                        }
-                    }
                     img {
                         width: 100%;
                     }
@@ -158,12 +154,8 @@ export default {
                             line-height: 60px;
                             font-size: 25px;
                             border-radius: 50%;
-                            color: white;
-                            background-color: #2B2E32;
-                            &:hover {
-                                background-color: #e4e6e9;
-                                color: black;
-                            }
+                            color: $white-color;
+                            background-color: $low-black;
                         }
                     }
                 }
@@ -175,7 +167,7 @@ export default {
                 }
                 .price {
                     display: flex;
-                    color: #427ED1;
+                    color: $blue-color;
                     padding-top: 10px;
                     span {
                         padding-right: 5px;

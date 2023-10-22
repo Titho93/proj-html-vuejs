@@ -139,10 +139,14 @@ export default {
 
 <style lang="scss">
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .container-rc {
     margin: 250px auto 0 auto;
 
-    border-top: 2px solid #F5F5F5;
+    border-top: 2px solid $darkwhite-color;
     width: 98%;
 
     .recap {
@@ -159,7 +163,7 @@ export default {
             }
             li {
                 padding: 10px 0;
-                border-bottom: 2px solid #F5F5F5;
+                border-bottom: 2px solid $darkwhite-color;
                 .bio {
                     width: 205px;
                     flex-direction: column;

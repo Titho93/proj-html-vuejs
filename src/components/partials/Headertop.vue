@@ -61,6 +61,10 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .container-bt {
   width: 70%;
   margin: 0 auto;
@@ -77,10 +81,7 @@ export default {
         cursor: pointer;
         padding: 12px 10px;
         a{
-          color: black;
-          &:hover {
-            color: #427ED1;
-          }
+          color: $black-color;
         }
       }
     }
@@ -91,23 +92,18 @@ export default {
     width: 50%;
     ul {
       font-size: 13px;
-      color: #AAAAAA;
+      color: $lightgrey-color;
       li {
         cursor: pointer;
-        border-right: 1px solid #F5F5F5;
-        &:hover {
-          color: #427ED1;
-          background-color: #FAFAFA;
-        }
+        border-right: 1px solid $darkwhite-color;
       }
     }
   }
 }
 
 .cart {
-  color: #494949;
+  color: $grey-color;
   padding: 15px 50px;
-  background-color: FAFAFA;
 }
 
 ul {

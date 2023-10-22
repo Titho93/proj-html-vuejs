@@ -31,6 +31,7 @@ export default {
 <style lang="scss">
 
 @use '../scss/Main.scss';
+@use '../scss/partials/Var.scss' as *;
 
 .container-jb {
   width: 100%;
@@ -54,7 +55,7 @@ export default {
     }
   }
   h4 {
-    color: white;
+    color: $white-color;
   }
 }
 </style>

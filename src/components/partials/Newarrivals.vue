@@ -44,6 +44,10 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .fp {
     text-align: center;
     p {

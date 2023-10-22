@@ -30,6 +30,7 @@ export default {
 </template>
 
 <style lang="scss">
-@use './scss/Main.scss'
+@use './scss/Main.scss';
+
 
 </style>

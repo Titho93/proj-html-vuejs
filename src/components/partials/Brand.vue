@@ -36,12 +36,16 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .container-lo {
     width: 100%;
     height: 300px;
     padding-top: 60px;
     text-align: center;
-    background-color: #F5F5F5;
+    background-color: $darkwhite-color;
     span {
         letter-spacing: 0.2em;
         padding-left: 30px;

@@ -31,9 +31,13 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .container-se {
   height: 230px;
-  background-color: #303337;
+  background-color: $dark-grey;
   .send {
     text-align: center;
     margin: 0 auto;
@@ -47,13 +51,13 @@ export default {
         height: 60px;
         font-size: 35px;
         border-radius: 50%;
-        background-color: #2B2E32;
-        color: #AAAAAA;
+        background-color: $light-black;
+        color: $lightgrey-color;
         line-height: 60px;
       }
       h3 {
         line-height: 60px;
-        color: white;
+        color: $white-color;
         font-size: 35px;
         padding: 0 30px;
       }

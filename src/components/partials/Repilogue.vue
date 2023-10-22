@@ -112,8 +112,11 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
 .container-se {
-    background-color: #2B2E32;
+    background-color: $light-black;
     width: 100%;
     height: 480px;
     .repilogue {
@@ -127,7 +130,7 @@ export default {
             .contact {
                 padding: 50px 0;
                 flex-direction: column;
-                color: white;
+                color: $white-color;
                 font-size: 14px;
                 span {
                     padding: 5px 0 ;
@@ -140,11 +143,8 @@ export default {
                     list-style: none;
                     li {
                         cursor: pointer;
-                        color: white;
+                        color: $white-color;
                         padding-right: 15px;
-                        &:hover {
-                            color: #427ED1;
-                        }
                     }
                 }
             }
@@ -155,7 +155,7 @@ export default {
             padding-left: 80px;
             ul {
                 list-style: none;
-                color: white;
+                color: $white-color;
                 width: 100%;
                 .title {
                     font-size: 12px;
@@ -165,14 +165,14 @@ export default {
                 li {
                     cursor: pointer;
                     padding: 10px 0;
-                    border-bottom: 1px solid #F5F5F5;
+                    border-bottom: 1px solid $darkwhite-color;
                     .bio {
                         width: 205px;
                         flex-direction: column;
                         .object {
                             font-size: 14px;
                             &:hover {
-                                color: #427ED1;
+                                color: $blue-color;
                             }
                         }
                         .price {
@@ -191,9 +191,6 @@ export default {
                 li {
                     cursor: pointer;
                     font-size: 14px;
-                    :hover {
-                        color: #427ED1;
-                    }
                     i {
                         font-size: 12px;
                         padding: 8px;
@@ -204,9 +201,6 @@ export default {
                 li {
                     border-bottom: none;
                     padding: 0;
-                    :hover {
-                        color: #427ED1;
-                    }
                 }
             }
         }

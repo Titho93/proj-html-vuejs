@@ -83,6 +83,10 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .fp {
   padding-top: 50px;
   text-align: center;
@@ -102,11 +106,6 @@ export default {
       padding: 10px;
       position: relative;
       cursor: pointer;
-      &:hover {
-        .hover-li {
-          display: block;
-        }
-      }
       img {
         width: 100%;
         height: 300px;
@@ -118,7 +117,7 @@ export default {
         top: 0;
         position: absolute;
         background: linear-gradient(#5087d4e9 0%, #8692d4e6 25%, rgba(173, 157, 211, 0.913) 50%, #f0a6d2f5 100%);
-        color: white;
+        color: $white-color;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -146,17 +145,11 @@ export default {
               position: absolute;
               left: 20px;
               bottom: 20px;
-              &:hover {
-                color: #427ED1;
-              }
             }
             .details {
               position: absolute;
               right: 20px;
               bottom: 20px;
-              &:hover {
-                color: #427ED1;
-              }
             }
           }
         }

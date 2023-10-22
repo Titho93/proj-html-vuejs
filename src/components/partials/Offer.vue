@@ -42,6 +42,10 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .offer {
     margin-top: 100px;
     width: 100%;
@@ -63,7 +67,7 @@ export default {
                 height: 370px;
             }
             .bio {
-                color: white;
+                color: $white-color;
                 position: absolute;
                 top: 35%;
                 left: 15%;

@@ -1,0 +1,143 @@
+@use './Var.scss' as *;
+
+// Button 
+button {
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.763);
+        color: $black-color;
+    }
+}
+button.blue {
+    &:hover {
+        opacity: 50%;
+    }
+}
+
+// Arrow 
+.arrow {
+    &:hover {
+        background-color: $black-color;
+    }
+}
+
+// Social 
+.social {
+    li {
+        a {
+            :hover {
+                color: $blue-color;
+            }
+        }
+    }
+}
+
+// Header top 
+.menu-list {
+    li {
+        &:hover {
+            color: $blue-color;
+            background-color: $menu-hover-background;
+        }
+    }
+}
+
+// Header bottom 
+.nav-bottom {
+    .menu {
+        li {
+            &:hover {
+                border-top: 3px solid $blue-color;
+                color: $blue-color;
+            }
+        }
+    }
+}
+
+// Products 
+.select {
+    li {
+        &:hover {
+            background-color: $white-color;
+        }
+    }
+}
+.card-product {
+    .card-pt {
+        .image {
+            &:hover {
+                .hover-card {
+                    display: flex;
+                }
+            }
+            .hover-card {
+                i {
+                    &:hover {
+                        background-color: $card-hover-selection;
+                        color: $black-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Best Seller 
+.swiper {
+    li {
+        &:hover {
+            .hover-li {
+              display: block;
+            }
+        }
+        .hover-li {
+            .back {
+                .menu {
+                    .cart,
+                    .details {
+                        &:hover {
+                            color: $blue-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Repilogue 
+.repilogue {
+    .contacts {
+        .social {
+            li {
+                :hover {
+                    color: $blue-color;
+                }
+            }
+        }
+    }    
+    .replist {
+        ul {
+            li {
+                .object {
+                    :hover {
+                        color: $blue-color;
+                    }
+                }
+            }
+        }
+        .post {
+            li {
+                :hover {
+                    color: $blue-color;
+                }
+            }
+        }
+        .tags {
+            li {
+                :hover {
+                    color: $blue-color;
+                }
+            }
+        }
+    }
+}

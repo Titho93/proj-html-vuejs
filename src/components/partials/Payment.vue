@@ -53,16 +53,20 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .container-se {
     width: 100%;
     height: 130px;
-    background-color: #1C1E21;
+    background-color: $low-black;
     .pay {
         padding-top: 40px;
         flex-direction: column;
         text-align: center;
         span {
-            color: white;
+            color: $white-color;
             font-size: 12px;
 
         }

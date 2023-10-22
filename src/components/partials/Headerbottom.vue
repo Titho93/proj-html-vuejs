@@ -63,6 +63,10 @@ export default {
 
 <style lang="scss">
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .container-bt {
   width: 70%;
   margin: 0 auto;
@@ -85,12 +89,8 @@ export default {
         font-size: 13px;
         margin-left: 40px;
         line-height: 100px;
-        border-top: 3px solid white;
+        border-top: 3px solid $white-color;
         cursor: pointer;
-        &:hover {
-          border-top: 3px solid #427ED1;
-          color: #427ED1;
-        }
         i {
           font-size: 10px;
           padding: 0 5px;

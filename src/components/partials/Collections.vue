@@ -48,12 +48,16 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .collection {
     padding-top: 150px;
     display: flex;
     width: 100vw;
     .square {
-        color: white;
+        color: $white-color;
         width: 100%;
         height: 600px;
         position: relative;

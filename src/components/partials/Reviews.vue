@@ -30,6 +30,10 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
+
 .reviews {
     margin-top: 130px;
     width: 100%;
@@ -52,7 +56,7 @@ export default {
     .bio {
         text-align: center;
         position: absolute;
-        color: white;
+        color: $white-color;
         top: 21%;
         left: 28%;
         p {

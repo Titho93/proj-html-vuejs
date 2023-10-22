@@ -59,6 +59,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+@use '../../scss/partials/Font.scss' as *;
+@use '../../scss/partials/Var.scss' as *;
+@use '../../scss/partials/Hover.scss' as *;
 .container-main {
     padding-top: 120px;
 }
