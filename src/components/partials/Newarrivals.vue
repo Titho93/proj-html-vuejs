@@ -2,6 +2,17 @@
 
 export default {
   name: 'Newarrivals',
+  data () {
+    return {
+      cards: [
+      'black_elegant_leather_jacket-400x520.jpg',
+      'hipster_black_top-400x520.jpg',
+      'black_leather_suit-400x520.jpg',
+      'spring_printed_dress-400x520.jpg',
+      'modern_love_tee-400x520.jpg'
+      ]
+    }
+  }
   
 }
 </script>
@@ -22,20 +33,9 @@ export default {
     <div class="swiper d-flex ">
     <div class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
     <ul class="d-flex">
-      <li>
-        <img src="../../assets/black_elegant_leather_jacket-400x520.jpg" alt="">
-      </li>
-      <li>
-        <img src="../../assets/hipster_black_top-400x520.jpg" alt="">
-      </li>
-      <li>
-        <img src="../../assets/black_leather_suit-400x520.jpg" alt="">
-      </li>
-      <li>
-        <img src="../../assets/spring_printed_dress-400x520.jpg" alt="">
-      </li>
-      <li>
-        <img src="../../assets/modern_love_tee-400x520.jpg" alt="">
+      <li v-for="(card,index) in cards"
+      :key="index">
+        <img :src="`../../assets/${card}`" alt="">
       </li>
     </ul>
     <div class="arrow right"><i class="fa-solid fa-chevron-right"></i></div>
