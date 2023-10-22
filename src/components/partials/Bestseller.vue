@@ -2,6 +2,42 @@
 
 export default {
   name: 'Bestseller',
+  data () {
+    return {
+      cards: [
+        {
+          image: 'spring_printed_dress-400x520.jpg',
+          title: 'Spring Printed Dress',
+          text: 'Women,Dress',
+          price: '$47'
+        },
+        {
+          image: 'modern_love_tee-400x520.jpg',
+          title: 'Modern Love Tee',
+          text: 'Women,T-Shirt',
+          price: '$68'
+        },
+        {
+          image: 'black_leather_jacket-400x520.jpg',
+          title: 'Black Leather Jacket',
+          text: 'Women,Jacket,Leather',
+          price: '$125'
+        },
+        {
+          image: 'black_elegant_leather_jacket-400x520.jpg',
+          title: 'Black Elegant Leather Jacket',
+          text: 'Man,Jacket,Leather',
+          price: '$200'
+        },
+        {
+          image: 'hipster_black_top-400x520.jpg',
+          title: 'Hipster Black Top',
+          text: 'Women,Top',
+          price: '$57'
+        },
+        ]
+    }
+  }
   
 }
 </script>
@@ -21,78 +57,15 @@ export default {
   <div class="swiper d-flex ">
     <div class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
     <ul>
-      <li>
-        <img src="../../assets/spring_printed_dress-400x520.jpg" alt="">
+      <li v-for="(card,index) in cards"
+      :key="index">
+        <img :src="`../../assets/${card.image}`" alt="">
         <div class="hover-li">
           <div class="back">
             <div class="bio">
-              <h4>Spring Printed Dress</h4>
-              <p>Women,Dress</p>
-              <span>$47</span>
-            </div>
-            <div class="menu">
-              <span class="cart"><i class="fa-solid fa-cart-shopping"></i> Add to cart</span>
-              <span class="details"><i class="fa-solid fa-list-ul"></i> Details</span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <img src="../../assets/modern_love_tee-400x520.jpg" alt="">
-        <div class="hover-li">
-          <div class="back">
-            <div class="bio">
-              <h4>Modern Love Tee</h4>
-              <p>Women,T-Shirt</p>
-              <span>$68</span>
-            </div>
-            <div class="menu">
-              <span class="cart"><i class="fa-solid fa-cart-shopping"></i> Add to cart</span>
-              <span class="details"><i class="fa-solid fa-list-ul"></i> Details</span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <img src="../../assets/black_leather_jacket-400x520.jpg" alt="">
-        <div class="hover-li">
-          <div class="back">
-            <div class="bio">
-              <h4>Black Leather Jacket</h4>
-              <p>Women,Jacket,Leather</p>
-              <span>$125</span>
-            </div>
-            <div class="menu">
-              <span class="cart"><i class="fa-solid fa-cart-shopping"></i> Add to cart</span>
-              <span class="details"><i class="fa-solid fa-list-ul"></i> Details</span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <img src="../../assets/black_elegant_leather_jacket-400x520.jpg" alt="">
-        <div class="hover-li">
-          <div class="back">
-            <div class="bio">
-              <h4>Black Elegant Leather Jacket</h4>
-              <p>Man,Jacket,Leather</p>
-              <span>$200</span>
-            </div>
-            <div class="menu">
-              <span class="cart"><i class="fa-solid fa-cart-shopping"></i> Add to cart</span>
-              <span class="details"><i class="fa-solid fa-list-ul"></i> Details</span>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <img src="../../assets/hipster_black_top-400x520.jpg" alt="">
-        <div class="hover-li">
-          <div class="back">
-            <div class="bio">
-              <h4>Hipster Black Top</h4>
-              <p>Women,Top</p>
-              <span>$57</span>
+              <h4>{{card.title}}</h4>
+              <p>{{ card.text }}</p>
+              <span>{{ card.price  }}</span>
             </div>
             <div class="menu">
               <span class="cart"><i class="fa-solid fa-cart-shopping"></i> Add to cart</span>
