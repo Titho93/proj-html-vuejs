@@ -2,6 +2,22 @@
 
 export default {
   name: 'Offer',
+  data () {
+    return {
+        squares: [
+            {
+                image: 'promo_box_1_bg.jpg',
+                title: '70% Off',
+                text: 'Vivamus tempor leo lacus, feugiat ut magna aliquam erat.'
+            },
+            {
+                image: 'promo_box_2_bg.jpg',
+                title: 'Free Shipping',
+                text: 'Vivamus tempor leo lacus, feugiat ut magna aliquam erat.'
+            },
+        ]
+    }
+  }
 }
 </script>
 
@@ -9,19 +25,12 @@ export default {
 
     <div class="offer">
         <div class="squares d-flex">
-            <div class="square">
-                <img src="../../assets/promo_box_1_bg.jpg" alt="">
+            <div v-for="(square,index) in squares" class="square"
+            :key="index">
+                <img :src="`../../assets/${square.image}`" alt="">
                 <div class="bio">
-                    <h2>70% Off</h2>
-                    <p>Vivamus tempor leo lacus, feugiat ut magna aliquam erat.</p>
-                    <button class="small">VIEW MORE</button>
-                </div>
-            </div>
-            <div class="square">
-                <img src="../../assets/promo_box_2_bg.jpg" alt="">
-                <div class="bio">
-                    <h2>Free Shipping</h2>
-                    <p>Vivamus tempor leo lacus, feugiat ut magna aliquam erat.</p>
+                    <h2>{{ square.title }}</h2>
+                    <p>{{ square.text }}</p>
                     <button class="small">VIEW MORE</button>
                 </div>
             </div>
