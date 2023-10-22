@@ -1,7 +1,35 @@
 <script>
 
 export default {
-  name: 'Ourblog'
+  name: 'Ourblog',
+  data () {
+    return {
+        squares: [
+            {
+                image: 'post_img_12-700x441.jpg',
+                title: 'Aenean lobortis sapien enim viverra',
+                date: 'September 9th,2015',
+                comments: '0 Comments',
+                text: 'Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla.'
+            },
+            {
+                image: 'post_img_11-700x441.jpg',
+                title: 'Duis ac massa semper maximus',
+                date: 'September 9th,2015',
+                comments: '0 Comments',
+                text: 'Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla.'
+            },
+            {
+                image: 'post_img_10-700x441.jpg',
+                title: 'Nunc fermint nulla eu justo sem id',
+                date: 'September 9th,2015',
+                comments: '0 Comments',
+                text: 'Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla.'
+            },
+        ]
+    }
+  }
+  
 }
 </script>
 
@@ -18,23 +46,12 @@ export default {
         </div>
 
         <div class="squares d-flex">
-            <div class="square">
-                <img src="../../assets/post_img_12-700x441.jpg" alt="">
-                <h4><strong>Aenean lobortis sapien enim viverra</strong></h4>
-                <span>September 9th,2015 | 0 Comments</span>
-                <p>Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla.</p>
-            </div>
-            <div class="square">
-                <img src="../../assets/post_img_11-700x441.jpg" alt="">
-                <h4><strong>Duis ac massa semper maximus</strong></h4>
-                <span>September 9th,2015 | 0 Comments</span>
-                <p>Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla.</p>
-            </div>
-            <div class="square">
-                <img src="../../assets/post_img_10-700x441.jpg" alt="">
-                <h4><strong>Nunc fermint nulla eu justo sem id</strong></h4>
-                <span>September 9th,2015 | 0 Comments</span>
-                <p>Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla.</p>
+            <div v-for="(square,index) in squares" class="square"
+            :key="index">
+                <img :src="`../../assets/${ square.image }`" alt="">
+                <h4><strong>{{ square.title }}</strong></h4>
+                <span>{{ square.date }} | {{ square. comments}}</span>
+                <p> {{ square.text }}</p>
             </div>
         </div>
     </div>
