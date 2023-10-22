@@ -1,7 +1,18 @@
 <script>
 
 export default {
-  name: 'Brand'
+  name: 'Brand',
+  data () {
+    return {
+        images: [
+            'b_logotype_6.png',
+            'b_logotype_7.png',
+            'b_logotype_1.png',
+            'b_logotype_2.png',
+            'b_logotype_3.png'
+        ]
+    }
+  }
 }
 </script>
 
@@ -11,20 +22,9 @@ export default {
       <span>BRAND LOGOS</span>
       <div class="logos">
         <ul>
-            <li>
-                <img src="../../assets/b_logotype_6.png" alt="">
-            </li>
-            <li>
-                <img src="../../assets/b_logotype_7.png" alt="">
-            </li>
-            <li>
-                <img src="../../assets/b_logotype_1.png" alt="">
-            </li>
-            <li>
-                <img src="../../assets/b_logotype_2.png" alt="">
-            </li>
-            <li>
-                <img src="../../assets/b_logotype_3.png" alt="">
+            <li v-for="(image,index) in images"
+            :key="index">
+                <img :src="`../../assets/${ image }`" alt="">
             </li>
         </ul>
     </div>
