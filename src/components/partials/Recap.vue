@@ -117,10 +117,10 @@ export default {
                 <div class="bio d-flex">
                     <span class="object">{{ product.title }}</span>
                     <span class="stars">
-                                <i v-for="index in 5"
-                                :key="index"
-                                :class="`${ product.rate }`"></i>
-                            </span>
+                        <i v-for="index in 5"
+                        :key="index"
+                        :class="`${ product.rate }`"></i>
+                    </span>
                     <div class="price">
                         <span class="discount">{{ product.discount }}</span>
                         <span class="real">{{ product.price }}</span>
