@@ -104,10 +104,11 @@ export default {
 .container-se {
     background-color: $light-black;
     width: 100%;
-    height: 480px;
+    height: 100%;
     .repilogue {
         width: 70%;
         margin: 0 auto;
+        padding-bottom: 70px;
         .contacts {
             padding-top: 70px;
             img {
@@ -173,6 +174,7 @@ export default {
                 }
             }
             .post {
+                width: 100%;
                 li {
                     cursor: pointer;
                     font-size: 14px;
@@ -183,6 +185,7 @@ export default {
                 }
             }
             .tags {
+                width: 100%;
                 li {
                     border-bottom: none;
                     padding: 0;
