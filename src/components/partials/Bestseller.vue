@@ -35,10 +35,55 @@ export default {
           text: 'Women,Top',
           price: '$57'
         },
-      ]
+        {
+          image: 'black_leather_suit-400x520.jpg',
+          title: 'Black Leather Suit',
+          text: 'Men,Jackets',
+          price: '$176'
+        },
+        {
+          image: 'blue_jacket_and_white_stripe_tee-400x520.jpg',
+          title: 'Blue Jacket & Stripe Tee',
+          text: 'Men,Jackets,Suits',
+          price: '$580'
+        },
+        {
+          image: 'modern_black_leather_suit-400x520.jpg',
+          title: 'Modern Black Leather Suit',
+          text: 'Men,Jackets',
+          price: '$96'
+        },
+        {
+          image: 'leather_gloves-400x520.jpg',         
+          title: 'Leather Gloves',
+          text: 'Unisex,Gloves',
+          price: '$45',       
+        },
+        {
+          image: 'modern_leather_boots-400x520.jpg',
+          title: 'Modern Leather Boots',
+          text: 'Man,Boots',
+          price: '$30',
+        }        
+      ],
+      current: 0,
+      maxItems: 5,
     }
-  }
-  
+  },
+  computed: {
+    visibleCards() {
+      return this.cards.slice(this.current, this.current + this.maxItems);
+    }
+  },
+  methods: {
+  showNext() {
+    if (this.current + this.maxItems < this.cards.length) {
+      this.current += this.maxItems;
+    } else {
+      this.current = 0
+    }
+  },
+},
 }
 </script>
 
@@ -55,9 +100,10 @@ export default {
   </div>
   
   <div class="swiper d-flex ">
-    <div class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
+    <div @click="showNext" class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
+
     <ul>
-      <li v-for="(card,index) in cards"
+      <li v-for="(card,index) in visibleCards"
       :key="index">
         <img :src="`../../assets/${card.image}`" alt="">
         <div class="hover-li">
@@ -75,7 +121,8 @@ export default {
         </div>
       </li>
     </ul>
-    <div class="arrow right"><i class="fa-solid fa-chevron-right"></i></div>
+
+    <div @click="showNext" class="arrow right"><i class="fa-solid fa-chevron-right"></i></div>
   </div>
 </div>
 
