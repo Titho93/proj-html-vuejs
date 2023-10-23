@@ -155,7 +155,6 @@ export default {
       cursor: pointer;
       img {
         width: 100%;
-        height: 300px;
       }
       .hover-li {
         display: none;

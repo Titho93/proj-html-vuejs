@@ -14,68 +14,22 @@ body {
   overflow-x: hidden;
 }
 
-.container-tb {
-    width: 100%;
-    border-bottom: 1px solid #F5F5F5;
-  }
-
-  button {
-    padding: 15px 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid white;
-    color: white;
-    border-radius: 25px;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.763);
-      color: black;
-    }
-  }
-
-  .container-main {
-    padding-top: 100px;
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .sectionTitle {
-    margin: 0 auto;
-    .stripe {
-        width: 40%;
-    }
-    h2 {
-      width: 40%;
-      line-height: 20px;
-    }
-}
-
+.sectionTitle {
+  margin: 0 auto;
   .stripe {
-    width: 100%;
-    height: 1px;
-    border: 1px solid #F5F5F5;
-    margin-top: 10px;
+      width: 40%;
   }
-
-  button.small {
-    padding: 10px 25px;
-    font-size: 13px;
-}
-
-.arrow {
-  margin: auto 0;
-  height: 60px;
-  padding: 0 13px;
-  background-color: #dbd9d9;
-  line-height: 55px;
-  color: white;
-  cursor: pointer;
-  &:hover {
-    background-color: #060606;
-  }
-  i {
-    font-size: 10px;
+  h2 {
+    width: 40%;
+    line-height: 20px;
   }
 }
-
+.stripe {
+  width: 100%;
+  height: 1px;
+  border: 1px solid $darkwhite-color;
+  margin-top: 10px;
+}
 .stars {
   i {
     color: $blue-color;
@@ -83,30 +37,10 @@ body {
     padding: 10px 0;
   }
 }
-
 .discount {
   text-decoration: line-through;
   font-size: 15px;
 }
-
-button.blue {
-  height: 40px;
-  padding: 0 30px;
-  background-color: #427ED1;
-  color: white;
-  border-radius: 20px;
-  font-size: 13px;
-  border: none;
-  margin: 32px;
-  &:hover {
-    opacity: 50%;
-  }
-}
-
-.container-se {
-  width: 100%;
-}
-
 .tag {
   display: inline-block;
   padding: 5px 9px;
@@ -114,4 +48,55 @@ button.blue {
   font-size: 12px;
   margin: 3px;
   cursor: pointer;
+}
+
+
+// Container 
+.container-tb {
+  width: 100%;
+  border-bottom: 1px solid $darkwhite-color;
+}
+.container-main {
+  padding-top: 100px;
+  width: 70%;
+  margin: 0 auto;
+}
+.container-se {
+  width: 100%;
+}
+
+
+// Buttons 
+button {
+  padding: 15px 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid $white-color;
+  color: $white-color;
+  border-radius: 25px;
+}
+button.blue {
+  height: 40px;
+  padding: 0 30px;
+  background-color: $blue-color;
+  color: $white-color;
+  border-radius: 20px;
+  font-size: 13px;
+  border: none;
+  margin: 32px;
+}
+button.small {
+  padding: 10px 25px;
+  font-size: 13px;
+}
+.arrow {
+  margin: auto 0;
+  height: 60px;
+  padding: 0 13px;
+  background-color: $arrow-background;
+  line-height: 55px;
+  color: $white-color;
+  cursor: pointer;
+  i {
+    font-size: 10px;
+  }
 }

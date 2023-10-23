@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     nextImage() {
-      if (this.current < this.cards.length - 1) {
+      if (this.current < this.cards.length - 5) {
         this.current++;
       }
     },
@@ -54,7 +54,7 @@ export default {
     </div>
 
     <div class="swiper d-flex ">
-    <div @click="prevImage" class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
+    <div @click="prevImage"  class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
     <ul class="d-flex">
       <li v-for="(card,index) in displayCard"
       :key="index">
@@ -82,9 +82,10 @@ export default {
     ul {
         padding-top: 40px;
         list-style: none;
+        width: 100%;
         li {
             img {
-                height: 470px;
+              width: 100%;
             }
         }
     }
