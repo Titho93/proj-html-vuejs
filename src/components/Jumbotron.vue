@@ -57,5 +57,9 @@ export default {
   h4 {
     color: $white-color;
   }
+  h1 {
+    font-size: 100px;
+    color: $white-color;
+  }
 }
 </style>

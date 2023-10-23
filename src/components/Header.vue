@@ -27,9 +27,12 @@ export default {
 
 <style lang="scss" scoped>
 
+@use '../scss/Main.scss';
+@use '../scss/partials/Var.scss' as *;
+
  .container-tb {
   width: 100%;
-  border-bottom: 1px solid #F5F5F5;
+  border-bottom: 1px solid $darkwhite-color;
 }
 
 

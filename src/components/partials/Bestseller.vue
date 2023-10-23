@@ -35,7 +35,7 @@ export default {
           text: 'Women,Top',
           price: '$57'
         },
-        ]
+      ]
     }
   }
   

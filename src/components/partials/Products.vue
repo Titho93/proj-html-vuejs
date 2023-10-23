@@ -6,42 +6,100 @@ export default {
     return {
         cards: [
             {
-                image: 'black_elegant_leather_jacket-400x520.jpg',
-                font: 'fa-regular fa-square-check',
-                title: 'Black Leather Jacket',
-                bio: 'Men,Jackets,Jeans',
-                discount: '$235',
-                price: '$200'
-
-            },
-            {
-                image: 'black_leather_suit-400x520.jpg',
-                font: 'fa-regular fa-square-check',
-                title: 'Black Leather Suit',
-                bio: 'Men,Jackets',
-                price: '$176'
-
-            },
-            {
-                image: 'blue_jacket_and_white_stripe_tee-400x520.jpg',
-                font: 'fa-regular fa-square-check',
-                title: 'Blue Jacket & Stripe Tee',
-                bio: 'Men,Jackets,Suits',
-                price: '$580'
-
-            },
-            {
-                image: 'modern_black_leather_suit-400x520.jpg',
-                font: 'fa-regular fa-square-check',
-                title: 'Modern Black Leather Suit',
-                bio: 'Men,Jackets',
-                price: '$96'
-
+                men: [
+                    {
+                        image: 'black_elegant_leather_jacket-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Black Leather Jacket',
+                        bio: 'Men,Jackets,Jeans',
+                        discount: '$235',
+                        price: '$200'
+        
+                    },
+                    {
+                        image: 'black_leather_suit-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Black Leather Suit',
+                        bio: 'Men,Jackets',
+                        price: '$176'
+        
+                    },
+                    {
+                        image: 'blue_jacket_and_white_stripe_tee-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Blue Jacket & Stripe Tee',
+                        bio: 'Men,Jackets,Suits',
+                        price: '$580'
+        
+                    },
+                    {
+                        image: 'modern_black_leather_suit-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Modern Black Leather Suit',
+                        bio: 'Men,Jackets',
+                        price: '$96'
+        
+                    }
+    
+                ],
+                women: [
+                    {
+                        image: 'spring_printed_dress-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Spring Printed Dress',
+                        bio: 'Women,Dress',
+                        price: '$47'
+                    },
+                    {
+                        image: 'modern_love_tee-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Modern Love Tee',
+                        bio: 'Women,T-Shirt',
+                        price: '$68'
+                    },
+                    {
+                        image: 'black_leather_jacket-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Black Leather Jacket',
+                        bio: 'Women,Jacket,Leather',
+                        price: '$125'
+                    },
+                    {
+                        image: 'hipster_black_top-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Hipster Black Top',
+                        bio: 'Women,Top',
+                        price: '$57'
+                    }
+                ],
+                accessories: [
+                    {
+                        image: 'leather_gloves-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Leather Gloves',
+                        bio: 'Unisex,Gloves',
+                        price: '$45',
+                       
+                    },
+                    {
+                        image: 'modern_leather_boots-400x520.jpg',
+                        font: 'fa-regular fa-square-check',
+                        title: 'Modern Leather Boots',
+                        bio: 'Man,Boots',
+                        discount: '$50',
+                        price: '$30',
+                    }
+                ],
             }
-        ]
+        ],
+        selectedCategory: [],
+    }
+  },
+  methods: {
+    showCategory(category) {
+        this.selectedCategory = this.cards[0][category];
     }
   }
-  
 }
 </script>
 
@@ -60,26 +118,26 @@ export default {
 
         <div class="select">
             <ul>
-                <li>Men</li>
-                <li>Women</li>
-                <li>Accessories</li>
+                <li @click="showCategory('men')">Men</li>
+                <li @click="showCategory('women')">Women</li>
+                <li @click="showCategory('accessories')">Accessories</li>
             </ul>
         </div>
 
         <div class="card-product">
             <ul>
-                <li v-for="(card,index) in cards"
-                :key="index">
+                <li v-for="item in selectedCategory"
+                :key="item.title">
                     <div class="card-pt">
                         <div class="image">
-                            <img :src="`/assets/${ card.image }`" alt="">
-                            <div class="hover-card"><i :class="card.font"></i></div>
+                            <img :src="`/assets/${ item.image }`" alt="">
+                            <div class="hover-card"><i :class="item.font"></i></div>
                         </div>
-                        <h4>{{card.title}}</h4>
-                        <span class="bio">{{card.bio}}</span>
+                        <h4>{{item.title}}</h4>
+                        <span class="bio">{{item.bio}}</span>
                         <div class="price">
-                            <span class="discount">{{card.discount}}</span>
-                            <span class="real">{{card.price}}</span>
+                            <span class="discount">{{item.discount}}</span>
+                            <span class="real">{{item.price}}</span>
                         </div>
                     </div>
                 </li>
