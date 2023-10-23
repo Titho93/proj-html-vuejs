@@ -1,7 +1,37 @@
 <script>
 
 export default {
-  name: 'Reviews'
+  name: 'Reviews',
+  data () {
+        return {
+            firstTestimonials: [
+                {
+                    image: 'man_testimonial.png',
+                    reviews: 'Curabitur non tristique tortor. Vestibulum aliquet suscipit ipsum in volupat. Donec vel lacinia sem, vitae semper nulla. In hac habitasse platea dictumst. Mauris consectetur est et nibh sadip hendrerit bibendum.',
+                    name: 'Dario Pineda',
+                    position: 'Theme Fusion',
+                    circle: 'fa-solid fa-circle',
+                    circle2: 'fa-regular fa-circle'
+                }
+            ],
+            secondTestimonials: [    
+                {
+                    image: 'woman_testimonial.png',
+                    reviews: 'Curabitur non tristique tortor. Vestibulum aliquet suscipit ipsum in volupat. Donec vel lacinia sem, vitae semper nulla. In hac habitasse platea dictumst. Mauris consectetur est et nibh sadip hendrerit bibendum.',
+                    name: 'Gaia Gomes',
+                    position: 'Engineer',
+                    circle: 'fa-regular fa-circle',
+                    circle2: 'fa-solid fa-circle'
+                }
+            ],
+            showFirst: true
+        }
+    },
+    methods: {
+        toggleTestimonials() {
+            this.showFirst = !this.showFirst;
+        },
+    },
 }
 </script>
 
@@ -14,13 +44,16 @@ export default {
     <div class="backsecond">
         <img src="../../assets/testimonials_home_1_bg.jpg" alt="">
     </div>
-    <div class="bio">
-        <img src="../../assets/man_testimonial.png" alt="">
-        <p>Curabitur non tristique tortor. Vestibulum aliquet suscipit ipsum in volupat. Donec vel lacinia sem, vitae semper nulla. In hac habitasse platea dictumst. Mauris consectetur est et nibh sadip hendrerit bibendum.</p>
-       <span><strong>Dario Pineda</strong>, Theme Fusion</span>
+    <div v-for="testimonial in (showFirst ? firstTestimonials : secondTestimonials)" class="bio"
+    :key="testimonial.name">
+        <img :src="`../../assets/${testimonial.image}`" alt="">
+        <p>{{ testimonial.reviews }}</p>
+       <span><strong>{{ testimonial.name }}</strong>, {{ testimonial.position }}</span>
        <div class="circle">
-        <i class="fa-solid fa-circle"></i>
-        <i class="fa-regular fa-circle"></i>
+        <i :class="testimonial.circle"
+        @click="toggleTestimonials"></i>
+        <i :class="testimonial.circle2"
+        @click="toggleTestimonials"></i>
        </div>
     </div>
 
