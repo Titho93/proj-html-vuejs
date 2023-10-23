@@ -68,12 +68,12 @@ export default {
 @use '../../scss/partials/Hover.scss' as *;
 
 .container-bt {
-  width: 70%;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .nav-bottom {
-  width: 100%;
+  margin: 0 auto;
+  width: 70%;
   height: 100px;
   display: flex;
   .logo {

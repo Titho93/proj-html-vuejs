@@ -1,9 +1,12 @@
 <script>
 
+import iconsocial from '../../data/social';
+
 export default {
   name: 'Repilogue',
   data () {
     return {
+        iconsocial,
         products: [
             {
                 title: 'Leather Gloves',
@@ -59,10 +62,12 @@ export default {
                 </div>
                 <div class="social">
                     <ul>
-                    <li><i class="fa-brands fa-facebook-f"></i></li>
-                    <li><i class="fa-brands fa-twitter"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-youtube"></i></li>
+                        <li v-for="(item,index) in iconsocial"
+                        :key="index">
+                            <a :href="item.href">
+                            <i :class="item.font"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -143,8 +148,10 @@ export default {
                     list-style: none;
                     li {
                         cursor: pointer;
-                        color: $white-color;
                         padding-right: 15px;
+                        a{
+                            color: $white-color;
+                        }
                     }
                 }
             }
@@ -171,9 +178,6 @@ export default {
                         flex-direction: column;
                         .object {
                             font-size: 14px;
-                            &:hover {
-                                color: $blue-color;
-                            }
                         }
                         .price {
                             font-size: 15px;

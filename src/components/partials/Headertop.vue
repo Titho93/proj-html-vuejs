@@ -1,27 +1,12 @@
 <script>
 
+import iconsocial from '../../data/social';
+
 export default {
   name: 'Headertop',
   data () {
     return {
-      iconsocial: [
-      {
-        href: '#',
-        font: 'fa-brands fa-facebook-f'
-      },
-      {
-        href: '#',
-        font: 'fa-brands fa-twitter'
-      },
-      {
-        href: '#',
-        font: 'fa-brands fa-instagram'
-      },
-      {
-        href: '#',
-        font: 'fa-brands fa-youtube'
-      }
-      ] 
+      iconsocial
     }
   }
   
