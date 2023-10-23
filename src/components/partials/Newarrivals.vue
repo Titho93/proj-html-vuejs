@@ -9,11 +9,34 @@ export default {
       'hipster_black_top-400x520.jpg',
       'black_leather_suit-400x520.jpg',
       'spring_printed_dress-400x520.jpg',
-      'modern_love_tee-400x520.jpg'
-      ]
+      'modern_love_tee-400x520.jpg',
+      'blue_jacket_and_white_stripe_tee-400x520.jpg',
+      'black_leather_jacket-400x520.jpg',
+      'modern_black_leather_suit-400x520.jpg',
+      ],
+      imageShow: 5,
+      current: 0,
+    }
+  },
+  computed: {
+    displayCard() {
+     const start = this.current;
+     const end = start + this.imageShow;
+      return this.cards.slice(start, end);
+    }
+  },
+  methods: {
+    nextImage() {
+      if (this.current < this.cards.length - 1) {
+        this.current++;
+      }
+    },
+    prevImage() {
+      if (this.current > 0) {
+        this.current--;
+      }
     }
   }
-  
 }
 </script>
 
@@ -31,14 +54,14 @@ export default {
     </div>
 
     <div class="swiper d-flex ">
-    <div class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
+    <div @click="prevImage" class="arrow left"><i class="fa-solid fa-chevron-left"></i></div>
     <ul class="d-flex">
-      <li v-for="(card,index) in cards"
+      <li v-for="(card,index) in displayCard"
       :key="index">
         <img :src="`../../assets/${card}`" alt="">
       </li>
     </ul>
-    <div class="arrow right"><i class="fa-solid fa-chevron-right"></i></div>
+    <div @click="nextImage" class="arrow right"><i class="fa-solid fa-chevron-right"></i></div>
   </div>
 </template>
 
