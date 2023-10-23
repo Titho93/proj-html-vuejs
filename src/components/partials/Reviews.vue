@@ -88,11 +88,11 @@ export default {
     }
     .bio {
         text-align: center;
-        position: absolute;
+        position: relative;
         color: $white-color;
-        top: 21%;
-        left: 28%;
+        top: -80%;
         p {
+            margin: 0 auto;
             width: 850px;
             font-size: 18px;
             padding: 25px 0;
