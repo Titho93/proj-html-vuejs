@@ -12,7 +12,7 @@ export default {
             },
             {
                 image: 'spring_collection_bg.jpg',
-                title: 'Spring Collectionn',
+                title: 'Spring Collection',
                 bio: 'BRIGHT AND COLORFUL'
             },
             {
